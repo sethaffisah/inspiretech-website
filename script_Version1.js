@@ -95,3 +95,11 @@ window.addEventListener('scroll', () => {
 // ==================== Console Message ====================
 console.log('%c🎨 Welcome to InspireTech Consult', 'color: #d4af37; font-size: 20px; font-weight: bold;');
 console.log('%cPremium Graphic Design & Computer Accessories', 'color: #d4af37; font-size: 14px;');
+
+document.querySelectorAll('.order-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        var product = encodeURIComponent(this.getAttribute('data-product'));
+        var url = `https://wa.me/233596182403?text=Hi%20InspireTech%2C%20I%20want%20to%20order%20the%20${product}.`;
+        window.open(url, '_blank');
+    });
+});
